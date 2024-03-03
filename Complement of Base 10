@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int bitwiseComplement(int n) {
+        int ans=0,mul=1;
+        if(n==0)
+        return 1;
+        while(n!=1)
+        {
+            ans=ans+((n%2)^1)*mul;
+            n/=2;
+            if(mul>INT32_MAX/2)
+            return 0;
+            mul=mul*2;
+        } 
+        return ans;
+    }
+};
