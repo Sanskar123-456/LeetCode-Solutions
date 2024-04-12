@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int secondlarge(int arr[],int n)
+{
+    int max,i,max2;
+    max=INT32_MIN;
+//1st largest element
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]>max)
+        {
+            max=arr[i];
+        }
+    }
+    max2=INT32_MIN;
+//2nd largest element
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]!=max&&arr[i]>max2)
+        {
+           max2=arr[i];
+        }
+    }
+    return max2;
+}
+int main()
+{
+    int arr[]={23,67,87,34,56};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int sec=secondlarge(arr,n);
+    cout<<"Second Largest element of array is : "<<sec;
+}
