@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int linear(int a[],int n,int b)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==b)
+        {
+            return i;
+        }
+    }
+    if(i==n)
+    {
+        return 0;
+    }
+}
+int main()
+{
+    int item;
+    int arr[]={2,8,7,9,10};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<"Enter the item to be searched : ";
+    cin>>item;
+    cout<<linear(arr,n,item);
+}
