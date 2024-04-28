@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{ 
+    int tar;
+    int arr[]={8,2,4,8,9,8};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<"Enter the target element : ";
+    cin>>tar;
+    int i,j,max,min;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==tar)
+        {
+            min=i;
+            cout<<"MinIndex : "<<min<<endl;
+            break;
+        }
+    }
+    for(j=n-1;j>0;j--)
+    {
+        if(arr[j]==tar)
+        {
+            max=j;
+            cout<<"MaxIndex : "<<max;
+            break;
+        }
+    }
+}
